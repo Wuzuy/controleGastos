@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class=main-direita>
+        <div class="gestao-card">
+            <h2>Controle de Gastos</h2>
+            <form action="#">
+                <div>
+                    <label for="nomeGasto">Nome do Gasto</label>
+                    <input type="text" name="nomeGasto" id="nomeGasto" placeholder="Nome do gasto">
+                </div>
+                <div>
+                    <label for="valorGasto">Valor do Gasto</label>
+                    <input type="number" name="valorGasto" id="valorGasto" placeholder="Valor do gasto" step="0.01">
+                </div>
+                <button type="button" onclick="adicionarGasto()" id="gasto-btn">Adicionar Gasto</button>
+            </form>
+        </div>
+
+        <div class="gastos-lista">
+            <h2>Lista de Gastos</h2>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Gasto</th>
+                        <th>Valor do Gasto</th>
+                        <th>Edição</th>
+                        <th>Remoção</th>
+                    </tr>
+                </thead>
+                <tbody id="listaGastos"></tbody>
+            </table>
+
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valor Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="valorTotal">R$ 0,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="main-direita">
+        <div class="relatorio-card">
+            <h2>Relatório de Alterações</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="relatorioGastos"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
